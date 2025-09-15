@@ -3,7 +3,25 @@ import React from 'react';
 import { FiExternalLink, FiGithub, FiStar, FiCode } from 'react-icons/fi';
 
 const Projects = () => {
-const projectList = [
+const projectList = [{
+  title: "WhatsApp Form",
+  description: "A web application that enables users to send messages directly through a form, which are then delivered to WhatsApp using Twilio integration and stored securely in a MongoDB database.",
+  features: [
+    "Responsive and user-friendly form design",
+    "Seamless WhatsApp message delivery via Twilio API",
+    "Automatic message storage in MongoDB",
+    "Efficient state management for form handling",
+    "Cross-platform responsive layout"
+  ],
+  tools: ["HTML", "CSS", "Tailwind CSS", "React", "Twilio", "MongoDB"],
+  img: "https://whatappform.vercel.app/",
+  demo: "https://whatappform.vercel.app/",
+  code: "https://github.com/yashmaurya3377/whatappformFrontend",
+  status: "Live",
+  date: "September 2025",
+  challenges: "Designing the logic to integrate Twilio for WhatsApp messaging and synchronizing data storage in MongoDB.",
+  lessons: "Gained hands-on experience in connecting third-party APIs (Twilio) with a frontend form, handling state management, and persisting messages in a database."
+},
   {
     title: "Full-Service Grocery E-Commerce Platform",
     description: "A mobile-optimized online grocery marketplace utilizing React Context API for centralized state management.",
@@ -156,9 +174,9 @@ const projectList = [
                 <div className="mb-4">
                   <div className="flex justify-between items-start">
                     <h3 className="text-xl font-bold text-gray-800 dark:text-white">{project.title}</h3>
-                    <span className="text-xs text-gray-500 dark:text-gray-400">{project.date}</span>
+                    <span className="text-xs text-gray-500 dark:text-gray-700">{project.date}</span>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 mt-2 text-sm">{project.description}</p>
+                  <p className="text-gray-800 dark:text-gray-300 mt-2 text-sm">{project.description}</p>
                 </div>
 
                 <div className="mb-4">
@@ -167,9 +185,9 @@ const projectList = [
                   </h4>
                   <ul className="space-y-1 text-sm">
                     {project.features.slice(0, 3).map((feature, i) => (
-                      <li key={i} className="flex items-start text-gray-600 dark:text-gray-400">
+                      <li key={i} className="flex items-start text-gray-900 ">
                         <span className="text-blue-500 mr-2">•</span>
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-sm ">{feature}</span>
                       </li>
                     ))}
                     {project.features.length > 3 && (
